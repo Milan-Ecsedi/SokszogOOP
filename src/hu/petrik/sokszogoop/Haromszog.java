@@ -9,6 +9,7 @@ public class Haromszog extends Sokszog{
         super(a);
         this.b = b;
         this.c = c;
+
         if (!this.isSzerkesztheto()){
 
             throw new IllegalArgumentException("A háromszög nem szerkeszthető!!");
@@ -17,6 +18,27 @@ public class Haromszog extends Sokszog{
         }
     }
 
+
+    public Haromszog(){
+
+        super(veletlenOldalGeneralas());
+        this.b= veletlenOldalGeneralas();
+        this.c= veletlenOldalGeneralas();
+
+        while (!this.isSzerkesztheto())
+        {
+
+            super.setA(veletlenOldalGeneralas());
+            this.b=veletlenOldalGeneralas();
+            this.c=veletlenOldalGeneralas();
+
+
+        }
+    }
+
+    private static double veletlenOldalGeneralas() {
+        return Math.random() * 10 + 5;
+    }
 
     public double getB() {
         return b;
