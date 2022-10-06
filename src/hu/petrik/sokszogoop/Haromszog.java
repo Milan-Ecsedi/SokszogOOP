@@ -115,7 +115,7 @@ public class Haromszog extends Sokszog{
 
 
     public String toString() {
-        return String.format("Háromszög: a= %-10.3f b= %-10.3f c= %-10.3f K= %-10.3f T= %-10.3f", this.getA(), this.getB(), this.getC(), this.getKerulet(), this.getTerulet());
+        return String.format("Háromszög: a= %-10.3f b= %-10.3f c= %-10.3f %s", this.getA(), this.getB(), this.getC(), super.toString());
     }
 
 
